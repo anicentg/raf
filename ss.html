@@ -76,16 +76,19 @@
         }
 
         function playScreamerVideo() {
-            let video = document.createElement('video');
-            video.src = 'path_to_your_screamer_video.mp4'; // Set the source to your video
-            video.autoplay = true;
-            document.body.appendChild(video);
+    let video = document.createElement('video');
+    video.src = 'https://github.com/anicentg/raf/blob/main/Jeff%20the%20killer%20-%20Scream%20%26%20Face-(480p).mp4?raw=true'; // Direct link to your video on GitHub
+    video.autoplay = true;
+    video.onended = function() {
+        // Optional: what to do after the video ends, like closing it or redirecting the player.
+    };
+    document.body.appendChild(video);
 
-            // Optional: full-screen the video for effect
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            }
-        }
+    // Optional: full-screen the video for effect
+    if (video.requestFullscreen) {
+        video.requestFullscreen();
+    }
+    }
     </script>
-</body>
-</html>
+    </body>
+    </html>
